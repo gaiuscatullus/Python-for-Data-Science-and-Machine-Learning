@@ -65,30 +65,38 @@ arr = np.linspace(0,1,20)
 # Now you will be given a few matrices, and be asked to replicate the
 # resulting matrix outputs:
 
-# array([[12, 13, 14, 15],
+mat = np.arange(1,26).reshape(5,5)
+
+#array([[ 1,  2,  3,  4,  5],
+#       [ 6,  7,  8,  9, 10],
+#       [11, 12, 13, 14, 15],
+#       [16, 17, 18, 19, 20],
+#       [21, 22, 23, 24, 25]])
+
+#Output:
+#array([[12, 13, 14, 15],
 #       [17, 18, 19, 20],
 #       [22, 23, 24, 25]])
 
-arr = ([12,13,14,15],[17,18,19,20],[22,23,24,25])
+mat[2:, 1:]
 
+# Out[41]: 20
 
-# Output: 20
+mat[3,4]
 
-arr = np.arange(1,21)
-
-# Output: array([[ 2],
+# Out[42]: 
+#    array([[ 2],
 #       [ 7],
 #       [12]])
 
-# create range (2,16) -- reshpae to 14x1 matrix
-arr = np.arange(2,16).reshape(14,1)
+mat[0:3,1].reshape(3,1)
 
-# array([21, 22, 23, 24, 25])
-arr = np.arange(20,26)
-arr[1:]
+# Out[46]: array([21, 22, 23, 24, 25])
 
-# Output: 
-#       array([[16, 17, 18, 19, 20],
-#       [21, 22, 23, 24, 25]])
+mat[4]
 
-arr = np.arange(16,26).reshape(2,5)
+#Out[49]: 
+#     array([[16, 17, 18, 19, 20],
+#     [21, 22, 23, 24, 25]])
+
+print(mat[3:])
